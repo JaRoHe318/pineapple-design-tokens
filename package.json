@@ -1,9 +1,9 @@
 {
   "name": "@heatshockpineapple/design-tokens",
-  "version": "0.1.0",
-  "description": "Shared design tokens and base theme for Heat Shock Pineapple sites",
-  "main": "src/tokens.css",
-  "style": "src/tokens.css",
+  "version": "0.1.2", 
+  "description": "Shared design tokens including Lab Mode and Abyss Blue",
+  "main": "src/theme-base.css",
+  "style": "src/theme-base.css",
   "files": [
     "src"
   ],

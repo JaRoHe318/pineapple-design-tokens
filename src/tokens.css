@@ -1,7 +1,7 @@
 /* Shared design tokens: light + dark */
 
 :root {
-  /* Paper / surfaces */
+  /* Paper / surfaces (Light Mode Defaults) */
   --bg-paper: #fdfbf7;      /* Warm Cream */
   --bg-surface: #f5f3ef;    /* Slightly darker for cards */
   
@@ -10,16 +10,29 @@
   --text-body: #4a4540;     /* Dark Earth Grey */
   --text-muted: #858079;    /* Pencil Grey */
   
-  /* Accents */
+  /* Accents - Earth & Forest */
   --accent-primary: #2d5a45;                    /* Dark Forest Green */
-  --accent-glow: rgba(45, 90, 69, 0.12);       /* Green glow */
-  --accent-warm: #c4835f;                      /* Terracotta secondary */
+  --accent-glow: rgba(45, 90, 69, 0.12);        /* Green glow */
+  --accent-warm: #c4835f;                       /* Terracotta secondary */
 
-  /* Borders */
+  /* Accents - The Abyss (New) */
+  --accent-abyss: #0a192f;                      /* Deepest Ocean Blue */
+  --accent-ocean: #116466;                      /* Deep Teal/Cyan */
+  --accent-wave:  #64ffda;                      /* Bright Cyan Highlight */
+
+  /* High Contrast / Lab Mode Accents */
+  --bg-deep: #050505;                           /* Pure Deep Black */
+  --neon-green: #2ecc71;                        /* Biology Green */
+  --neon-terra: #e67e22;                        /* Safety Orange */
+
+  /* Glassmorphism System */
+  --glass-panel: rgba(255, 255, 255, 0.6);
+  --glass-border: rgba(0, 0, 0, 0.05);
+  --grid-color: rgba(0, 0, 0, 0.03);
+
+  /* Borders & Layout */
   --border: #e6e2dd;
   --border-strong: #d1cdc7;
-  
-  /* Layout */
   --max-width: 1000px;
   --radius: 8px;
   
@@ -31,20 +44,28 @@
 
 /* Dark theme tokens */
 [data-theme="dark"] {
-  --bg-paper: #1a1918;
-  --bg-surface: #242220;
-  --text-main: #e8e5df;
-  --text-body: #c4bfb5;
-  --text-muted: #8a8580;
+  /* Surfaces */
+  --bg-paper: var(--bg-deep);  /* Default to Deep Black in Dark Mode */
+  --bg-surface: #121212;
   
-  /* Dark mode green needs to be brighter to be readable */
-  --accent-primary: #6b9c82;
-  --accent-glow: rgba(107, 156, 130, 0.15);
-  --accent-warm: #d4996f;
+  /* Text */
+  --text-main: #ffffff;
+  --text-body: #a0a0a0;
+  --text-muted: #666666;
   
-  --border: #33302e;
-  --border-strong: #4d4945;
+  /* Accents */
+  --accent-primary: var(--neon-green);       /* Switch Forest to Neon */
+  --accent-glow: rgba(46, 204, 113, 0.15);
+  --accent-warm: var(--neon-terra);          /* Switch Terra to Neon */
+  
+  /* Glass - Dark Mode */
+  --glass-panel: rgba(20, 20, 20, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --grid-color: rgba(255, 255, 255, 0.03);
+  
+  --border: #333333;
+  --border-strong: #444444;
 
-  /* GFP / “fluorescent” accent available to components */
+  /* Fluorescent/Abyss extras available */
   --accent-fluorescent: #4ade80;
 }
