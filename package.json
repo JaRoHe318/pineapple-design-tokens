@@ -1,0 +1,11 @@
+{
+  "name": "@heatshockpineapple/design-tokens",
+  "version": "0.1.0",
+  "description": "Shared design tokens and base theme for Heat Shock Pineapple sites",
+  "main": "src/tokens.css",
+  "style": "src/tokens.css",
+  "files": [
+    "src"
+  ],
+  "license": "MIT"
+}

@@ -1,0 +1,50 @@
+/* Shared design tokens: light + dark */
+
+:root {
+  /* Paper / surfaces */
+  --bg-paper: #fdfbf7;      /* Warm Cream */
+  --bg-surface: #f5f3ef;    /* Slightly darker for cards */
+  
+  /* Ink / text */
+  --text-main: #2a2621;     /* Soft Black (Warm) */
+  --text-body: #4a4540;     /* Dark Earth Grey */
+  --text-muted: #858079;    /* Pencil Grey */
+  
+  /* Accents */
+  --accent-primary: #2d5a45;                    /* Dark Forest Green */
+  --accent-glow: rgba(45, 90, 69, 0.12);       /* Green glow */
+  --accent-warm: #c4835f;                      /* Terracotta secondary */
+
+  /* Borders */
+  --border: #e6e2dd;
+  --border-strong: #d1cdc7;
+  
+  /* Layout */
+  --max-width: 1000px;
+  --radius: 8px;
+  
+  /* Typography */
+  --font-serif: "Iowan Old Style", "Apple Garamond", "Baskerville", "Times New Roman", serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, sans-serif;
+  --font-mono: "SF Mono", "Menlo", "Consolas", "Courier New", monospace;
+}
+
+/* Dark theme tokens */
+[data-theme="dark"] {
+  --bg-paper: #1a1918;
+  --bg-surface: #242220;
+  --text-main: #e8e5df;
+  --text-body: #c4bfb5;
+  --text-muted: #8a8580;
+  
+  /* Dark mode green needs to be brighter to be readable */
+  --accent-primary: #6b9c82;
+  --accent-glow: rgba(107, 156, 130, 0.15);
+  --accent-warm: #d4996f;
+  
+  --border: #33302e;
+  --border-strong: #4d4945;
+
+  /* GFP / “fluorescent” accent available to components */
+  --accent-fluorescent: #4ade80;
+}
