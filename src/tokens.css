@@ -1,61 +1,71 @@
 /* Shared design tokens: light + dark */
 
+/* 1. Register Jost (The Maru Alternative) */
+@font-face {
+  font-family: 'Jost';
+  src: url('./fonts/Jost-Variable.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
-  /* Paper / surfaces (Light Mode Defaults) */
-  --bg-paper: #fdfbf7;      
-  --bg-surface: #f5f3ef;    
+  /* --- 2. MARU / STUDIO PALETTE (Backgrounds) --- */
+  /* Updated to cooler, modern warm-greys */
+  --bg-paper: #EAEAE6;       /* Page Background */
+  --bg-surface: #F4F4F0;     /* Visual/Light Card Background */
   
-  /* Ink / text */
-  --text-main: #2a2621;     
-  --text-body: #4a4540;     
-  --text-muted: #858079;    
+  /* --- 3. STUDIO TYPOGRAPHY COLORS --- */
+  /* Stricter, high-contrast text */
+  --text-main: #1A1A1A;      /* Soft Black */
+  --text-body: #4a4540;      /* Dark Earth Grey */
+  --text-muted: #666666;     /* Neutral Grey */
+  --text-inverse: #FFFFFF;   /* NEW: White text for dark cards */
   
-  /* Original Earth Accents */
+  /* --- 4. THE "ASPECT" CARD THEMES --- */
+  /* Specific background colors for the text side of your split cards */
+  --card-research: #1a2b20;  /* Deep Forest Green */
+  --card-photos: #114B5F;    /* Deep Teal (Naturalist) */
+  --card-journal: #36151E;   /* Deep Wine (Naturalist) */
+
+  /* Legacy Accents (Kept for compatibility) */
   --accent-primary: #2d5a45;                    
   --accent-glow: rgba(45, 90, 69, 0.12);        
   --accent-warm: #c4835f;                       
-
-  /* NEW: The Naturalist Palette (Your requested colors) */
-  --accent-deep-teal: #114B5F;   /* Deep Ocean/Forest */
-  --accent-deep-wine: #36151E;   /* Dark Cherry/Leather */
-  
-  /* High Contrast / Lab Mode */
-  --bg-deep: #050505;       
-  --neon-green: #2ecc71;    
-  --neon-terra: #e67e22;    
+  --accent-deep-teal: #114B5F;
+  --accent-deep-wine: #36151E;
 
   /* Glassmorphism System */
   --glass-panel: rgba(255, 255, 255, 0.6);
   --glass-border: rgba(0, 0, 0, 0.05);
   --grid-color: rgba(0, 0, 0, 0.03);
 
-  /* Borders & Layout */
+  /* --- 5. UPDATED LAYOUT & FONTS --- */
   --border: #e6e2dd;
   --border-strong: #d1cdc7;
-  --max-width: 1000px;
-  --radius: 8px;
+  --max-width: 1200px;       /* Widened for the split-card layout */
+  --radius: 24px;            /* Increased radius for the "Aspect" look */
   
-  /* Typography */
-  --font-serif: "Iowan Old Style", "Apple Garamond", "Baskerville", "Times New Roman", serif;
-  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, sans-serif;
-  --font-mono: "SF Mono", "Menlo", "Consolas", "Courier New", monospace;
+  /* Typography: Jost is now the default */
+  --font-sans: 'Jost', Futura, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: "Iowan Old Style", "Apple Garamond", "Baskerville", serif;
+  --font-mono: "SF Mono", "Menlo", "Consolas", monospace;
 }
 
 /* Dark theme tokens */
 [data-theme="dark"] {
   /* Surfaces */
-  --bg-paper: var(--bg-deep);
-  --bg-surface: #121212;
+  --bg-paper: #121212;
+  --bg-surface: #1E1E1E;
   
   /* Text */
   --text-main: #ffffff;
   --text-body: #a0a0a0;
-  --text-muted: #666666;
+  --text-muted: #888888;
+  --text-inverse: #ffffff; /* Stays white in dark mode */
   
-  /* Accents */
-  --accent-primary: var(--neon-green);       
-  --accent-glow: rgba(46, 204, 113, 0.15);
-  --accent-warm: var(--neon-terra);          
+  /* In dark mode, we might want the cards to blend in more or pop */
+  /* For now, we keep the specific colored card backgrounds */
   
   /* Glass - Dark Mode */
   --glass-panel: rgba(20, 20, 20, 0.6);
