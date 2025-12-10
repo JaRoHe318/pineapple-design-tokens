@@ -2,28 +2,27 @@
 
 :root {
   /* Paper / surfaces (Light Mode Defaults) */
-  --bg-paper: #fdfbf7;      /* Warm Cream */
-  --bg-surface: #f5f3ef;    /* Slightly darker for cards */
+  --bg-paper: #fdfbf7;      
+  --bg-surface: #f5f3ef;    
   
   /* Ink / text */
-  --text-main: #2a2621;     /* Soft Black (Warm) */
-  --text-body: #4a4540;     /* Dark Earth Grey */
-  --text-muted: #858079;    /* Pencil Grey */
+  --text-main: #2a2621;     
+  --text-body: #4a4540;     
+  --text-muted: #858079;    
   
-  /* Accents - Earth & Forest */
-  --accent-primary: #2d5a45;                    /* Dark Forest Green */
-  --accent-glow: rgba(45, 90, 69, 0.12);        /* Green glow */
-  --accent-warm: #c4835f;                       /* Terracotta secondary */
+  /* Original Earth Accents */
+  --accent-primary: #2d5a45;                    
+  --accent-glow: rgba(45, 90, 69, 0.12);        
+  --accent-warm: #c4835f;                       
 
-  /* Accents - The Abyss (New) */
-  --accent-abyss: #0a192f;                      /* Deepest Ocean Blue */
-  --accent-ocean: #116466;                      /* Deep Teal/Cyan */
-  --accent-wave:  #64ffda;                      /* Bright Cyan Highlight */
-
-  /* High Contrast / Lab Mode Accents */
-  --bg-deep: #050505;                           /* Pure Deep Black */
-  --neon-green: #2ecc71;                        /* Biology Green */
-  --neon-terra: #e67e22;                        /* Safety Orange */
+  /* NEW: The Naturalist Palette (Your requested colors) */
+  --accent-deep-teal: #114B5F;   /* Deep Ocean/Forest */
+  --accent-deep-wine: #36151E;   /* Dark Cherry/Leather */
+  
+  /* High Contrast / Lab Mode */
+  --bg-deep: #050505;       
+  --neon-green: #2ecc71;    
+  --neon-terra: #e67e22;    
 
   /* Glassmorphism System */
   --glass-panel: rgba(255, 255, 255, 0.6);
@@ -45,7 +44,7 @@
 /* Dark theme tokens */
 [data-theme="dark"] {
   /* Surfaces */
-  --bg-paper: var(--bg-deep);  /* Default to Deep Black in Dark Mode */
+  --bg-paper: var(--bg-deep);
   --bg-surface: #121212;
   
   /* Text */
@@ -54,9 +53,9 @@
   --text-muted: #666666;
   
   /* Accents */
-  --accent-primary: var(--neon-green);       /* Switch Forest to Neon */
+  --accent-primary: var(--neon-green);       
   --accent-glow: rgba(46, 204, 113, 0.15);
-  --accent-warm: var(--neon-terra);          /* Switch Terra to Neon */
+  --accent-warm: var(--neon-terra);          
   
   /* Glass - Dark Mode */
   --glass-panel: rgba(20, 20, 20, 0.6);
@@ -66,6 +65,5 @@
   --border: #333333;
   --border-strong: #444444;
 
-  /* Fluorescent/Abyss extras available */
   --accent-fluorescent: #4ade80;
 }
