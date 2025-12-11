@@ -1,11 +1,20 @@
 {
   "name": "@heatshockpineapple/design-tokens",
   "version": "0.1.4",
-  "description": "Shared design tokens including Deep Teal and Wine",
-  "main": "src/theme-base.css",
-  "style": "src/theme-base.css",
+  "description": "Shared design tokens and base theme for the Heat Shock Pineapple sites.",
+  "main": "src/index.css",
+  "style": "src/index.css",
   "files": [
     "src"
   ],
-  "license": "MIT"
+  "sideEffects": [
+    "src/index.css",
+    "src/theme-base.css",
+    "src/tokens.css"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JaRoHe318/pineapple-design-tokens.git"
+  }
 }

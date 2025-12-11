@@ -1,0 +1,11 @@
+/* Pineapple Design System – main entry point
+ *
+ * Importing this file will:
+ *  - load the shared design tokens (colors, typography, spacing)
+ *  - apply base theme styles (body, headings, ambient background)
+ *
+ * Recommended usage in a site:
+ *  @import "pineapple-design-tokens/src/index.css";
+ */
+
+@import "./theme-base.css";
