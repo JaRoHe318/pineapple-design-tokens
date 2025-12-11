@@ -1,6 +1,6 @@
 {
   "name": "@heatshockpineapple/design-tokens",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Shared design tokens and base theme for the Heat Shock Pineapple sites.",
   "main": "src/index.css",
   "style": "src/index.css",
