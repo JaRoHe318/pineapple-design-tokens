@@ -3,7 +3,7 @@
 /* 1. Register Jost (The Maru Alternative) */
 @font-face {
   font-family: 'Jost';
-  src: url('./fonts/Jost-Variable.ttf') format('truetype');
+  src: url('./fonts/Jost.ttf') format('truetype');
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
