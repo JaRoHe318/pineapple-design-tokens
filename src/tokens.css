@@ -1,6 +1,4 @@
-/* Shared design tokens: light + dark */
-
-/* 1. Register Jost (The Maru Alternative) */
+/* 1. Register Jost */
 @font-face {
   font-family: 'Jost';
   src: url('./fonts/Jost.ttf') format('truetype');
@@ -10,28 +8,58 @@
 }
 
 :root {
-  /* --- 2. MARU / STUDIO PALETTE (Backgrounds) --- */
-  /* Updated to cooler, modern warm-greys */
-  --bg-paper: #EAEAE6;       /* Page Background */
-  --bg-surface: #F4F4F0;     /* Visual/Light Card Background */
+  /* --- 1. PRIMITIVES (The Raw Colors) --- */
   
-  /* --- 3. STUDIO TYPOGRAPHY COLORS --- */
-  /* Stricter, high-contrast text */
-  --text-main: #1A1A1A;      /* Soft Black */
-  --text-body: #4a4540;      /* Dark Earth Grey */
-  --text-muted: #666666;     /* Neutral Grey */
-  --text-inverse: #FFFFFF;   /* NEW: White text for dark cards */
+  /* Pineapple Gold */
+  --color-gold-500: #d4b059; 
   
-  /* --- 4. THE "ASPECT" CARD THEMES --- */
-  /* Specific background colors for the text side of your split cards */
-  --card-research: #1a2b20;  /* Deep Forest Green */
-  --card-photos: #114B5F;    /* Deep Teal (Naturalist) */
-  --card-journal: #36151E;   /* Deep Wine (Naturalist) */
+  /* Your "Heat Shock" Jungle Greens */
+  --color-jungle-900: #1a2b20;
+  --color-jungle-800: #243b30;
 
-  /* Legacy Accents (Kept for compatibility) */
-  --accent-primary: #2d5a45;                    
-  --accent-glow: rgba(45, 90, 69, 0.12);        
-  --accent-warm: #c4835f;                       
+  /* Paper / Backgrounds */
+  --color-paper-light: #EAEAE6;
+  --color-paper-dark: #121212;
+  --color-surface-light: #F4F4F0;
+  --color-surface-dark: #1E1E1E;
+
+  /* --- 2. SEMANTIC TOKENS (How the site uses them) --- */
+  
+  /* BRANDING */
+  --brand-primary: var(--color-jungle-800);
+  
+  /* THE FIX: Mapped brand-secondary to the new Gold */
+  --brand-secondary: var(--color-gold-500); 
+  
+  /* SURFACES */
+  --bg-paper: var(--color-paper-light);
+  --bg-surface: var(--color-surface-light);
+  
+  /* TYPOGRAPHY */
+  --text-main: #1A1A1A;
+  --text-body: #4a4540;
+  --text-muted: #666666;
+  --text-inverse: #FFFFFF;
+
+  /* --- 3. LAYOUT & UTILITIES --- */
+  --border: #e6e2dd;
+  --border-strong: #d1cdc7;
+  --max-width: 1200px;
+  --radius: 24px;
+  
+  /* Fonts */
+  --font-sans: 'Jost', Futura, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: "Iowan Old Style", "Apple Garamond", "Baskerville", serif;
+  --font-mono: "SF Mono", "Menlo", "Consolas", monospace;
+
+  /* --- 4. LEGACY / COMPATIBILITY (RESTORED) --- */
+  /* These were preserved to prevent breaking other apps in the ecosystem */
+  
+  --card-research: #1a2b20;
+  --card-photos: #114B5F;
+  --card-journal: #36151E;
+
+  --accent-warm: #c4835f;                
   --accent-deep-teal: #114B5F;
   --accent-deep-wine: #36151E;
 
@@ -39,41 +67,23 @@
   --glass-panel: rgba(255, 255, 255, 0.6);
   --glass-border: rgba(0, 0, 0, 0.05);
   --grid-color: rgba(0, 0, 0, 0.03);
-
-  /* --- 5. UPDATED LAYOUT & FONTS --- */
-  --border: #e6e2dd;
-  --border-strong: #d1cdc7;
-  --max-width: 1200px;       /* Widened for the split-card layout */
-  --radius: 24px;            /* Increased radius for the "Aspect" look */
-  
-  /* Typography: Jost is now the default */
-  --font-sans: 'Jost', Futura, -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-serif: "Iowan Old Style", "Apple Garamond", "Baskerville", serif;
-  --font-mono: "SF Mono", "Menlo", "Consolas", monospace;
 }
 
-/* Dark theme tokens */
+/* DARK THEME OVERRIDES */
 [data-theme="dark"] {
-  /* Surfaces */
-  --bg-paper: #121212;
-  --bg-surface: #1E1E1E;
+  --bg-paper: var(--color-paper-dark);
+  --bg-surface: var(--color-surface-dark);
   
-  /* Text */
   --text-main: #ffffff;
   --text-body: #a0a0a0;
   --text-muted: #888888;
-  --text-inverse: #ffffff; /* Stays white in dark mode */
-  
-  /* In dark mode, we might want the cards to blend in more or pop */
-  /* For now, we keep the specific colored card backgrounds */
-  
-  /* Glass - Dark Mode */
-  --glass-panel: rgba(20, 20, 20, 0.6);
-  --glass-border: rgba(255, 255, 255, 0.1);
-  --grid-color: rgba(255, 255, 255, 0.03);
   
   --border: #333333;
   --border-strong: #444444;
-
-  --accent-fluorescent: #4ade80;
+  
+  --accent-fluorescent: #4ade80; /* Keep the radioactive green for dark mode */
+  
+  /* Dark Mode Glass (Restored) */
+  --glass-panel: rgba(20, 20, 20, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.1);
 }
