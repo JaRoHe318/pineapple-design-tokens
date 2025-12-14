@@ -1,3 +1,5 @@
+/* src/tokens.css */
+
 /* 1. Register Jost */
 @font-face {
   font-family: 'Jost';
@@ -17,7 +19,7 @@
   --color-jungle-900: #1a2b20;    
   --color-jungle-800: #243b30;    
 
-  /* NEW: HEAT COLORS (Added for Portfolio) */
+  /* HEAT COLORS */
   --color-heat-900: #751e29;      /* Blood Red */
   --color-heat-400: #d66c84;      /* Dusty Pink */
 
@@ -25,7 +27,7 @@
   --color-paper-light: #EAEAE6;   /* Standard Cool */
   --color-paper-dark: #121212;    /* Standard Dark */
   
-  /* NEW: WARM PAPER SYSTEM (Added for Portfolio) */
+  /* WARM PAPER SYSTEM */
   --color-paper-warm: #fdfbf7;      /* Warm Cream */
   --color-paper-warm-dark: #111111; /* Deep Black */
 
@@ -41,17 +43,17 @@
   --brand-primary: var(--color-jungle-800);
   --brand-secondary: var(--color-gold-500); 
   
-  /* SURFACES (Default System) */
+  /* SURFACES */
   --bg-paper: var(--color-paper-light);
   --bg-surface: var(--color-surface-light);
   
-  /* TYPOGRAPHY (Standardized) */
+  /* TYPOGRAPHY */
   --text-main: #1A1A1A;    
-  --text-body: #333333;    /* Sharp Dark Grey (Updated from #4a4540) */
+  --text-body: #333333;    
   --text-muted: #666666;   
   --text-inverse: #FFFFFF;
 
-  /* ATMOSPHERE (Fixed missing variable for theme-base) */
+  /* ATMOSPHERE */
   --accent-glow: rgba(36, 59, 48, 0.05);
   --accent-primary: var(--brand-primary); 
 
@@ -70,7 +72,6 @@
   /* ========================================= */
   /* 4. COMPATIBILITY / LEGACY                 */
   /* ========================================= */
-  /* Kept exactly as they were to ensure Hub/Photos don't break */
   --card-research: #1a2b20;
   --card-photos: #114B5F;
   --card-journal: #36151E;
@@ -80,6 +81,22 @@
   --glass-panel: rgba(255, 255, 255, 0.6);
   --glass-border: rgba(0, 0, 0, 0.05);
   --grid-color: rgba(0, 0, 0, 0.03);
+
+  /* ========================================= */
+  /* 5. SAFE TRANSPARENCIES (NEW)              */
+  /* ========================================= */
+  /* These fix the layout crash by avoiding 'color-mix' in the Portfolio */
+  
+  /* Light Mode Transparencies */
+  --border-dim: rgba(0, 0, 0, 0.08);       
+  --glow-heat-red: rgba(117, 30, 41, 0.05);     
+  --glow-jungle: rgba(36, 59, 48, 0.05);        
+  --selection-red: rgba(117, 30, 41, 0.15);
+  
+  /* Dark Mode Transparencies (Defaults) */
+  --border-dim-dark: rgba(255, 255, 255, 0.12);
+  --glow-fluorescent: rgba(74, 222, 128, 0.05); 
+  --glow-pink: rgba(214, 108, 132, 0.05);       
 }
 
 /* DARK THEME OVERRIDES */
@@ -87,9 +104,8 @@
   --bg-paper: var(--color-paper-dark);
   --bg-surface: var(--color-surface-dark);
   
-  /* Standardized Dark Text */
   --text-main: #ffffff;
-  --text-body: #e5e5e5;   /* Bright Grey (Updated from #a0a0a0) */
+  --text-body: #e5e5e5;   
   --text-muted: #a0a0a0;  
   
   --border: #333333;
