@@ -9,32 +9,32 @@
 
 :root {
   /* ========================================= */
-  /* 1. PRIMITIVES (The Raw Colors)            */
+  /* 1. PRIMITIVES (The Ingredients)           */
   /* ========================================= */
   
-  /* Pineapple Gold */
-  --color-gold-500: #d4b059; 
+  /* BRAND COLORS */
+  --color-gold-500: #d4b059;      
+  --color-jungle-900: #1a2b20;    
+  --color-jungle-800: #243b30;    
+
+  /* NEW: HEAT COLORS (Added for Portfolio) */
+  --color-heat-900: #751e29;      /* Blood Red */
+  --color-heat-400: #d66c84;      /* Dusty Pink */
+
+  /* PAPER SYSTEM */
+  --color-paper-light: #EAEAE6;   /* Standard Cool */
+  --color-paper-dark: #121212;    /* Standard Dark */
   
-  /* Jungle Greens */
-  --color-jungle-900: #1a2b20;
-  --color-jungle-800: #243b30;
-
-  /* NEW: HEAT PALETTE (Added for Portfolio) */
-  --color-heat-900: #751e29; /* Blood Red */
-  --color-heat-400: #d66c84; /* Dusty Pink */
-
-  /* Paper / Backgrounds */
-  --color-paper-light: #EAEAE6;   /* Standard System Grey */
-  --color-paper-dark: #121212;    /* Standard Material Grey */
-  --color-surface-light: #F4F4F0;
-  --color-surface-dark: #1E1E1E;
-
   /* NEW: WARM PAPER SYSTEM (Added for Portfolio) */
   --color-paper-warm: #fdfbf7;      /* Warm Cream */
   --color-paper-warm-dark: #111111; /* Deep Black */
 
+  --color-surface-light: #F4F4F0;
+  --color-surface-dark: #1E1E1E;
+
+
   /* ========================================= */
-  /* 2. SEMANTIC TOKENS (Usage)                */
+  /* 2. SEMANTIC TOKENS (The Logic)            */
   /* ========================================= */
   
   /* BRANDING */
@@ -45,38 +45,38 @@
   --bg-paper: var(--color-paper-light);
   --bg-surface: var(--color-surface-light);
   
-  /* TYPOGRAPHY */
-  --text-main: #1A1A1A;
-  --text-body: #4a4540;
-  --text-muted: #666666;
+  /* TYPOGRAPHY (Standardized) */
+  --text-main: #1A1A1A;    
+  --text-body: #333333;    /* Sharp Dark Grey (Updated from #4a4540) */
+  --text-muted: #666666;   
   --text-inverse: #FFFFFF;
 
+  /* ATMOSPHERE (Fixed missing variable for theme-base) */
+  --accent-glow: rgba(36, 59, 48, 0.05);
+  --accent-primary: var(--brand-primary); 
+
   /* ========================================= */
-  /* 3. LAYOUT & UTILITIES                     */
+  /* 3. UTILITIES                              */
   /* ========================================= */
   --border: #e6e2dd;
   --border-strong: #d1cdc7;
   --max-width: 1200px;
   --radius: 24px;
   
-  /* Fonts */
   --font-sans: 'Jost', Futura, -apple-system, BlinkMacSystemFont, sans-serif;
   --font-serif: "Iowan Old Style", "Apple Garamond", "Baskerville", serif;
   --font-mono: "SF Mono", "Menlo", "Consolas", monospace;
 
   /* ========================================= */
-  /* 4. LEGACY / COMPATIBILITY                 */
+  /* 4. COMPATIBILITY / LEGACY                 */
   /* ========================================= */
-  
+  /* Kept exactly as they were to ensure Hub/Photos don't break */
   --card-research: #1a2b20;
   --card-photos: #114B5F;
   --card-journal: #36151E;
-
   --accent-warm: #c4835f;                
   --accent-deep-teal: #114B5F;
   --accent-deep-wine: #36151E;
-
-  /* Glassmorphism System */
   --glass-panel: rgba(255, 255, 255, 0.6);
   --glass-border: rgba(0, 0, 0, 0.05);
   --grid-color: rgba(0, 0, 0, 0.03);
@@ -87,16 +87,17 @@
   --bg-paper: var(--color-paper-dark);
   --bg-surface: var(--color-surface-dark);
   
+  /* Standardized Dark Text */
   --text-main: #ffffff;
-  --text-body: #a0a0a0;
-  --text-muted: #888888;
+  --text-body: #e5e5e5;   /* Bright Grey (Updated from #a0a0a0) */
+  --text-muted: #a0a0a0;  
   
   --border: #333333;
   --border-strong: #444444;
   
   --accent-fluorescent: #4ade80; 
+  --accent-glow: rgba(74, 222, 128, 0.04); 
   
-  /* Dark Mode Glass */
   --glass-panel: rgba(20, 20, 20, 0.6);
   --glass-border: rgba(255, 255, 255, 0.1);
 }
