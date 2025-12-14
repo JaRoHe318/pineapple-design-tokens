@@ -8,30 +8,40 @@
 }
 
 :root {
-  /* --- 1. PRIMITIVES (The Raw Colors) --- */
+  /* ========================================= */
+  /* 1. PRIMITIVES (The Raw Colors)            */
+  /* ========================================= */
   
   /* Pineapple Gold */
   --color-gold-500: #d4b059; 
   
-  /* Your "Heat Shock" Jungle Greens */
+  /* Jungle Greens */
   --color-jungle-900: #1a2b20;
   --color-jungle-800: #243b30;
 
+  /* NEW: HEAT PALETTE (Added for Portfolio) */
+  --color-heat-900: #751e29; /* Blood Red */
+  --color-heat-400: #d66c84; /* Dusty Pink */
+
   /* Paper / Backgrounds */
-  --color-paper-light: #EAEAE6;
-  --color-paper-dark: #121212;
+  --color-paper-light: #EAEAE6;   /* Standard System Grey */
+  --color-paper-dark: #121212;    /* Standard Material Grey */
   --color-surface-light: #F4F4F0;
   --color-surface-dark: #1E1E1E;
 
-  /* --- 2. SEMANTIC TOKENS (How the site uses them) --- */
+  /* NEW: WARM PAPER SYSTEM (Added for Portfolio) */
+  --color-paper-warm: #fdfbf7;      /* Warm Cream */
+  --color-paper-warm-dark: #111111; /* Deep Black */
+
+  /* ========================================= */
+  /* 2. SEMANTIC TOKENS (Usage)                */
+  /* ========================================= */
   
   /* BRANDING */
   --brand-primary: var(--color-jungle-800);
-  
-  /* THE FIX: Mapped brand-secondary to the new Gold */
   --brand-secondary: var(--color-gold-500); 
   
-  /* SURFACES */
+  /* SURFACES (Default System) */
   --bg-paper: var(--color-paper-light);
   --bg-surface: var(--color-surface-light);
   
@@ -41,7 +51,9 @@
   --text-muted: #666666;
   --text-inverse: #FFFFFF;
 
-  /* --- 3. LAYOUT & UTILITIES --- */
+  /* ========================================= */
+  /* 3. LAYOUT & UTILITIES                     */
+  /* ========================================= */
   --border: #e6e2dd;
   --border-strong: #d1cdc7;
   --max-width: 1200px;
@@ -52,8 +64,9 @@
   --font-serif: "Iowan Old Style", "Apple Garamond", "Baskerville", serif;
   --font-mono: "SF Mono", "Menlo", "Consolas", monospace;
 
-  /* --- 4. LEGACY / COMPATIBILITY (RESTORED) --- */
-  /* These were preserved to prevent breaking other apps in the ecosystem */
+  /* ========================================= */
+  /* 4. LEGACY / COMPATIBILITY                 */
+  /* ========================================= */
   
   --card-research: #1a2b20;
   --card-photos: #114B5F;
@@ -81,9 +94,9 @@
   --border: #333333;
   --border-strong: #444444;
   
-  --accent-fluorescent: #4ade80; /* Keep the radioactive green for dark mode */
+  --accent-fluorescent: #4ade80; 
   
-  /* Dark Mode Glass (Restored) */
+  /* Dark Mode Glass */
   --glass-panel: rgba(20, 20, 20, 0.6);
   --glass-border: rgba(255, 255, 255, 0.1);
 }
