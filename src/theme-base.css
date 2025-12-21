@@ -18,16 +18,36 @@ body {
 }
 
 /* Ambient lighting */
+/* body::before {
+  content: "";
+  position: fixed; 
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-image: 
+    radial-gradient(circle at 15% 50%, var(--accent-glow) 0%, transparent 45%),
+    radial-gradient(circle at 85% 10%, rgba(196, 131, 95, 0.03) 0%, transparent 40%);
+  pointer-events: none;
+  z-index: -1;
+} */
+
+/* The Atomic Lattice (Micro-Dot Grid) */
 body::before {
   content: "";
   position: fixed; 
   top: 0; left: 0;
   width: 100%; height: 100%;
-  /* background-image: 
-    radial-gradient(circle at 15% 50%, var(--accent-glow) 0%, transparent 45%),
-    radial-gradient(circle at 85% 10%, rgba(196, 131, 95, 0.03) 0%, transparent 40%); */
   pointer-events: none;
   z-index: -1;
+
+  /* Creates a subtle dot every 24px */
+  background-image: radial-gradient(var(--border) 1px, transparent 1px);
+  background-size: 24px 24px;
+
+  /* Fade it out at the bottom so the page doesn't feel like a jail cell */
+  mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+
+  opacity: 0.4; /* Adjust opacity: 0.3 for subtle, 0.6 for technical */
 }
 
 /* Typography */
