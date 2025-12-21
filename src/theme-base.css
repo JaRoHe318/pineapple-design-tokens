@@ -30,21 +30,27 @@ body {
   z-index: -1;
 } */
 
-/* Light Table Vignette */
+/* "Interference" (Scanlines) */
 body::before {
   content: "";
   position: fixed; 
   top: 0; left: 0;
   width: 100%; height: 100%;
   pointer-events: none;
-  z-index: -1;
-
-  /* A shadow that creeps in from the corners */
-  background-image: radial-gradient(
-    circle at 50% 50%, 
-    transparent 40%, 
-    rgba(0, 0, 0, 0.06) 100%
+  z-index: 10; /* Bring to front to ensure visibility, use blend mode to integrate */
+  
+  /* Creates a horizontal scanline every 4px */
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 2px,
+    var(--text-muted) 3px
   );
+  
+  /* Blends lines into the background */
+  background-size: 100% 4px;
+  opacity: 0.05; /* Increase to 0.1 to make it very obvious */
+  pointer-events: none;
 }
 
 
