@@ -30,7 +30,7 @@ body {
   z-index: -1;
 } */
 
-/* "Chromatography" (Coarse Paper) */
+/* Film Grain Texture */
 body::before {
   content: "";
   position: fixed; 
@@ -39,11 +39,12 @@ body::before {
   pointer-events: none;
   z-index: -1;
   
-  /* Lower baseFrequency makes the noise 'larger' and cloudier (Paper texture) */
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.6' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  /* Generates a noise texture */
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
   
-  opacity: 0.15; /* Higher opacity needed for this coarser texture */
-  filter: contrast(120%) brightness(110%);
+  /* Blends it with your paper color */
+  opacity: 0.04; /* Adjust: 0.03 is subtle, 0.07 is gritty */
+  filter: contrast(150%);
 }
 
 
