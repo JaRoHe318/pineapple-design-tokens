@@ -30,7 +30,7 @@ body {
   z-index: -1;
 } */
 
-/* The Atomic Lattice (Micro-Dot Grid) */
+/* Raw Data / Film Grain */
 body::before {
   content: "";
   position: fixed; 
@@ -39,15 +39,11 @@ body::before {
   pointer-events: none;
   z-index: -1;
 
-  /* Creates a subtle dot every 24px */
-  background-image: radial-gradient(var(--border) 1px, transparent 1px);
-  background-size: 24px 24px;
+  /* SVG Noise Filter */
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 
-  /* Fade it out at the bottom so the page doesn't feel like a jail cell */
-  mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
-
-  opacity: 0.4; /* Adjust opacity: 0.3 for subtle, 0.6 for technical */
+  opacity: 0.04; /* Very subtle */
+  filter: contrast(150%);
 }
 
 /* Typography */
