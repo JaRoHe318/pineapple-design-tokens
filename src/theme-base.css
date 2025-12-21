@@ -30,27 +30,20 @@ body {
   z-index: -1;
 } */
 
-/* "Interference" (Scanlines) */
+/* "Chromatography" (Coarse Paper) */
 body::before {
   content: "";
   position: fixed; 
   top: 0; left: 0;
   width: 100%; height: 100%;
   pointer-events: none;
-  z-index: 10; /* Bring to front to ensure visibility, use blend mode to integrate */
+  z-index: -1;
   
-  /* Creates a horizontal scanline every 4px */
-  background: repeating-linear-gradient(
-    to bottom,
-    transparent 0px,
-    transparent 2px,
-    var(--text-muted) 3px
-  );
+  /* Lower baseFrequency makes the noise 'larger' and cloudier (Paper texture) */
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.6' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
   
-  /* Blends lines into the background */
-  background-size: 100% 4px;
-  opacity: 0.05; /* Increase to 0.1 to make it very obvious */
-  pointer-events: none;
+  opacity: 0.15; /* Higher opacity needed for this coarser texture */
+  filter: contrast(120%) brightness(110%);
 }
 
 
